@@ -1,3 +1,4 @@
+
 # Coming::Soon
 
 Coming Soon is designed to return information on new upcoming games for the Nintendo Switch, including title, price, and release dates.
@@ -40,3 +41,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the Coming::Soon project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'web-debugger-0862'/coming-soon/blob/master/CODE_OF_CONDUCT.md).
+=======
+# coming-soon
+
