@@ -1,28 +1,31 @@
 class CLI 
+  attr_accessor :title, :dev, :release_date
+  
+  def self.list
+    Scraper.title.each do |title|
+      puts title.text 
+      Games.all 
+  end
   
   def call 
+    input = gets.strip
     puts "Check out these cool games coming soon to Nintendo Switch! "
-    Games.all 
-    menu
-  end 
-  
-  def menu
-    puts "Please choose a number for more info, list, or exit: "
-    if @input.downcase == "list"
-        call
-      elsif @input.downcase == "exit"
-        goodbye
-      elsif @input.to_i.between?(1, Games.all.count)
-        #select_game_by_number
+    self.list 
+    puts "Please choose a game for more info, list, or exit: "
+    if input.downcase == "list"
+        list
+        call 
+      elsif input.downcase == "exit"
+        "Thank you for checking out the upcoming games."
+      elsif input == Scraper.title_scrape
+        @dev 
+        @release_date 
       else
         "I don't understand what you entered, try again."
         call
       end
-  end 
+    end
+  end
   
-  def goodbye
-    puts "Thank you for checking out the upcoming games."
-    break 
-  end 
   
 end 

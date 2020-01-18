@@ -1,24 +1,17 @@
 class Games
   
-  attr_accessor :title, :price, :release_date
+  attr_accessor :title, :dev, :release_date
   
   @@all = []
   
   def initialize 
     @title = title
-    @price = price
+    @dev = dev
     @release_date = release_date
+  end
+  
+  def self.all 
+    @@all << CLI.list
+    @@all 
   end 
-  
-  def self.all
-    list = Scraper.title_scrape
-    @@all << list 
-  end
-  
-  def self.print_all
-    all.each_with_index do |game, index|
-      puts "#{index+1}.     #{game.name}"
-    end
-  end
-  
 end 

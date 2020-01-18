@@ -1,18 +1,18 @@
 class Scraper
   
   def self.title_scrape
-    page = Nokogiri::HTML(open("https://www.nintendo.com/games/coming-soon/"))
-    title = page.css "a.info h3"
+    page = Nokogiri::HTML(open("http://www.nintendolife.com/nintendo-switch/games/browse?status=upcoming"))
+    titles = page.css("span.title.accent-hover")
   end 
   
-  def self.price_scrape
-    page = Nokogiri::HTML(open("https://www.nintendo.com/games/coming-soon/"))
-    price = page.css "span.price"
+  def self.dev_scrape
+    page = Nokogiri::HTML(open("http://www.nintendolife.com/nintendo-switch/games/browse?status=upcoming"))
+    price = page.css ("p.description")
   end 
   
   def self.date_scrape
-    page = Nokogiri::HTML(open("https://www.nintendo.com/games/coming-soon/"))
-    release_date = page.css "div.addeventatc1.flag.addeventatc.switch"
+    page = Nokogiri::HTML(open("http://www.nintendolife.com/nintendo-switch/games/browse?status=upcoming"))
+    release_date = page.css ("ul.release_dates")
   end 
     
     

@@ -6,4 +6,4 @@ require 'pry'
 require_relative './coming-soon/cli'
 require_relative "./coming-soon/version"
 require_relative './coming-soon/games'
-require_relative './pokedex/scraper'
+require_relative './coming-soon/scraper'
