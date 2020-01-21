@@ -15,9 +15,17 @@ class Games
       puts title.text
   end
   
-  #def self.all 
-  #  @@all << list
-  #  @@all 
-  #end 
+  def title
+    @title = Scraper.title_scrape
+  end
+  
+  def dev
+    @dev = Scraper.dev_scrape
+  end 
+  
+  def release_date
+    @release_date = Scraper.date_scrape
+  end 
+  
 end 
 end 
