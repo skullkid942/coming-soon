@@ -26,12 +26,12 @@ class Games
     @title = Scraper.title_scrape
   end
   
-  def self.dev(title)
+  def self.dev
     @dev = Scraper.dev_scrape
     @dev
   end 
   
-  def self.release_date(title)
+  def self.release_date
     @release_date = Scraper.date_scrape
     @release_date
   end 
