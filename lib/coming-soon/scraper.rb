@@ -2,7 +2,7 @@ class Scraper
   
   def self.title_scrape
     page = Nokogiri::HTML(open("http://www.nintendolife.com/nintendo-switch/games/browse?status=upcoming"))
-    titles = page.css("span.title.accent-hover")
+    titles = page.css("ul.items.cols-4.style-cover span.title.accent-hover")
   end 
   
   def self.dev_scrape

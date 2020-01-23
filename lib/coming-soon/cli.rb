@@ -15,11 +15,11 @@ class CLI
     if input.downcase == "list"
         Games.list
         puts message 
+      elsif input.downcase == Games.all.detect{|title| Scraper.title_scrape}
+        Games.dev(title) 
+        Games.release_date(title)
       elsif input.downcase == "exit"
         "Thank you for checking out the upcoming games."
-      elsif input == Games.list.detect{Scraper.title_scrape}
-        Games.dev 
-        Games.release_date 
       else
         "I don't understand what you entered, try again."
         puts message
